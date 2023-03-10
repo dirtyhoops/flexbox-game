@@ -1,0 +1,8 @@
+TODO for Daryll:
+1. find the aligntment of movedown - make sure it's align in the bottom of the board
+2. create more levels, play around how to create divs and then make it invisible for the rocks, so that way it's basically the same amount of boxes but different boxes (rocks and ships) are shown on the screen.
+3. 
+
+
+
+4. WRITE a better README file
