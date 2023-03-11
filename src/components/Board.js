@@ -6,12 +6,14 @@ import Rocks from './Rocks';
 const Board = ({ gameLevel, startGame }) => {
   return (
     <div className='board-container'>
-      <Ships startGame={startGame} />
-      <Rocks
-        rocksCount={gameLevel.rocksCount}
-        rocksAllignment={gameLevel.rocksAllignment}
-      />
-      {/* <p>ayoo</p> */}
+      <div className='board-container-inner-wrapper'>
+        <Ships startGame={startGame} />
+        <Rocks
+          rocksCount={gameLevel.rocksCount}
+          rocksAllignment={gameLevel.rocksAllignment}
+        />
+        {/* <p>ayoo</p> */}
+      </div>
     </div>
   );
 };

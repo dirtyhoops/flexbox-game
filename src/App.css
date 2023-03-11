@@ -1,30 +1,35 @@
-.App {
-  text-align: center;
-}
-
 .container {
-  max-width: 1000px;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  margin-top: 1rem;
 }
 
 .board-container {
-  width: 700px;
-  height: 90vh;
+  width: 35%;
+  height: 100%;
+  padding-bottom: 54%;
   background: yellow;
   position: relative;
-  margin: 0 auto;
 }
-
+.board-container-inner-wrapper{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
 .ships {
   display: flex;
   width: 100%;
   gap: 10px;
+  border: solid red 1px;
 }
 
 .ship {
-  flex: 0 0 24%;
+  flex: 0 0 13%;
   width: 25%;
-  height: 200px;
+  height: 15vh;
   background-color: blue;
 }
 
@@ -37,15 +42,10 @@
 }
 
 .rock {
-  flex: 0 0 24%;
-  width: 25%;
-  height: 200px;
+  flex: 0 0 10%;
+  width: 10%;
+  height: 10vh;
   background-color: red;
-}
-
-.movedown {
-  transform: translateY(70vh);
-  transition: all 5s ease-in;
 }
 
 /* diffrent rocks allignment */
