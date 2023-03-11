@@ -31,16 +31,22 @@
 .rocks {
   display: flex;
   width: 100%;
-  gap: 10px;
   position: absolute;
   bottom: 0;
 }
 
 .rock {
-  flex: 0 0 24%;
-  width: 25%;
+  flex: 0 0 10%;
+  width: 10%;
   height: 200px;
   background-color: red;
+}
+
+.rock-show {
+}
+
+.rock-hide {
+  display: none;
 }
 
 .movedown {

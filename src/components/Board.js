@@ -10,6 +10,7 @@ const Board = ({ gameLevel, startGame }) => {
       <Rocks
         rocksCount={gameLevel.rocksCount}
         rocksAllignment={gameLevel.rocksAllignment}
+        rocksPlacement={gameLevel.rocksPlacement}
       />
       {/* <p>ayoo</p> */}
     </div>
