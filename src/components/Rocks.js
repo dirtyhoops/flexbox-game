@@ -1,15 +1,21 @@
 import React from 'react';
 
-const Rocks = ({ rocksCount, rocksAlignment }) => {
+const Rocks = ({ rocksPlacement }) => {
   return (
-    <div className={`rocks ${rocksAlignment}`}>
-      {/* <div className='rocks'> */}
-      {Array.from({ length: rocksCount }, (_, i) => (
-        <div key={i} className='rock'>
-          {i}
-        </div>
+    // <div className={`rocks ${rocksAlignment}`}>
+    //   {Array.from({ length: rocksCount }, (_, i) => (
+    //     <div key={i} className='rock'>
+    //       {i}
+    //     </div>
+    //   ))}
+    // </div>
+    <div className='rocks'>
+      {rocksPlacement.map((rock, idx) => (
+        <div
+          key={idx}
+          className={`rock ${rock === 1 ? 'rock-show' : 'rock-hide'} `}
+        ></div>
       ))}
-      {/* <div className='rock'></div> */}
     </div>
   );
 };
