@@ -1,6 +1,6 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { levels } from './data/levels';
-import useInterval from './useInterval';
+import useInterval from './hooks/useInterval';
 
 import Board from './components/Board';
 import Input from './components/Input';
@@ -9,11 +9,11 @@ import './App.css';
 function App() {
   const [startGame, setStartGame] = useState(false);
   const [currentLevel, setCurrentLevel] = useState(1);
-  const [shipPositions, setShipPositions] = useState(0);
+  const [shipDistance, setShipDistance] = useState(0);
   const [shipsMoving, setShipsMoving] = useState(false);
-  const [userAnswer, setUserAnswer] = useState("justify-content: ");
+  const [defaultPosition, setDefaultPosition] = useState(levels[currentLevel].shipsAlignment);
 
-  const upLevel = () => {
+  function upLevel(){
     setCurrentLevel(current => {
       if(current < 5){
         return current + 1
@@ -29,35 +29,47 @@ function App() {
     setShipsMoving(true)
   }
 
+  function resetLevel(){
+    // to reset:
+    // shipDistance set to 0
+    // shipsMoving set to false
+    // defaultPosition set to levels[currentLevel].shipAlignment
+    // startGame set to false
+  }
+
   useInterval(() => {
-    if(shipPositions < 7){
-      setShipPositions(shipPositions + 1)
+    if(shipDistance < 7){
+      setShipDistance(shipDistance + 1)
     }else{
       setShipsMoving(false)
-      if(userAnswer === levels[currentLevel].answer){
+      if(defaultPosition === levels[currentLevel].answer){
         upLevel()
-        console.log('level complete')
+        console.log('correct answer! ready for the next level?')
       }else{
         console.log("wrong answer, try again")
       }
     }
   }, shipsMoving? 1000: null);
 
+  useEffect(() => {
+    setDefaultPosition(levels[currentLevel].shipsAlignment)
+  }, [currentLevel])
+  
   return (
     <div className='App'>
       <div className='container'>
         <Board 
           gameLevel={levels[currentLevel]} 
           startGame={startGame} 
-          shipPositions={shipPositions} 
+          shipDistance={shipDistance} 
           numOfShips={levels[currentLevel]['shipsCount']}
+          defaultPosition={defaultPosition}
           />
-        <button onClick={() => beginLevel()}>Start</button>
         < Input 
-          updateAnswer={setUserAnswer}
-          currentAnswer={userAnswer}
+          setShipStyling={setDefaultPosition}
         />
       </div>
+      {!startGame && <button className="start-button" onClick={() => beginLevel()}>Start</button>}
     </div>
   );
 }
