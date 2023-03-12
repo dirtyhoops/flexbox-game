@@ -1,7 +1,9 @@
-const Input = ({ checkAnswer }) => {
-    
+const Input = ( {updateAnswer, currentAnswer} ) => {
+    const updateUserInput = (e) => {
+        updateAnswer(e.target.value)
+    }
     return (
-        <input onChange={checkAnswer}></input>
+        <input onChange={updateUserInput} value={currentAnswer}></input>
     )
 }
 
