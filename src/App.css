@@ -1,45 +1,129 @@
-.App {
-  text-align: center;
-}
-
 .container {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.board-container {
-  width: 700px;
-  height: 90vh;
-  background: yellow;
-  position: relative;
-  margin: 0 auto;
-}
-
-.ships {
   display: flex;
+  justify-content: center;
+  height: 100%;
+  margin-top: 1rem;
+  align-items: center;
+}
+.user-input{
+  min-width: 25%;
+  min-height: 10rem;
+  margin-left: 6rem;
+  text-align: center;
+  font-size: 1.5rem;
+  word-break: break-all;
+}
+.user-prompt{
+  margin-left: 6rem;
+  font-size: 1.5rem;
+}
+.start-button{
+  margin-left: 40%;
+  height: 6rem;
+  width: 12rem;
+  background: red;
+  font-size: 1.5rem;
+}
+.board-container {
+  width: 35%;
+  height: 100%;
+  padding-bottom: 54%;
+  background-image: url("../public/river.gif");
+  position: relative;
+}
+.board-container-inner-wrapper{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+/* levels 1-6 positions for the ships */
+.ships-alignment-1{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 10px;
+}
+.ships-alignment-2{
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 10px;
+}
+.ships-alignment-3{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+.ships-alignment-4{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+}
+.ships-alignment-5{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  gap: 10px;
+}
+.ships-alignment-6{
+  display: flex;
+  justify-content: space-around;
   width: 100%;
   gap: 10px;
 }
 
+/* Classes to rotate through to 'animate' the boats down the river */
+.down-one{
+  margin-top: 10%;
+}
+.down-two{
+  margin-top:30%;
+}
+.down-three{
+  margin-top:50%;
+}
+.down-four{
+  margin-top:70%;
+}
+.down-five{
+  margin-top:90%;
+}
+.down-six{
+  margin-top:110%;
+}
+.down-seven{
+  margin-top:130%;
+}
+
+
 .ship {
-  flex: 0 0 24%;
-  width: 25%;
-  height: 200px;
-  background-color: blue;
+  width: 10%;
+  height: 100%;
+  background-image: url(../public/shipA.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-bottom: 24%;
 }
 
 .rocks {
   display: flex;
   width: 100%;
+  height: 10%;
+  gap: 10px;
   position: absolute;
   bottom: 0;
 }
 
 .rock {
-  flex: 0 0 10%;
   width: 10%;
-  height: 200px;
-  background-color: red;
+  height: 100%;
+  background-image: url(../public/rock2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .rock-show {
@@ -49,16 +133,12 @@
   display: none;
 }
 
-.movedown {
-  transform: translateY(70vh);
-  transition: all 5s ease-in;
-}
 
-/* diffrent rocks allignment */
-.rocks-allignment-1 {
+/* different rocks allignment */
+.rocks-alignment-1 {
   justify-content: end;
 }
 
-.rocks-allignment-2 {
+.rocks-alignment-2 {
   justify-content: space-between;
 }
