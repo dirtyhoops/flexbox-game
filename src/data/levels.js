@@ -7,6 +7,7 @@ const levels = {
     rocksCount: 2,
     rocksAlignment: 'rocks-alignment-1',
     answer: 'flex-start'
+    rocksPlacement: [0, 0, 0, 0, 0, 1, 1, 1, 1, 1],
   },
   2: {
     shipsCount: 2,

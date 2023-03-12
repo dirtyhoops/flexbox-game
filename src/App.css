@@ -126,6 +126,14 @@
   background-repeat: no-repeat;
 }
 
+.rock-show {
+}
+
+.rock-hide {
+  display: none;
+}
+
+
 /* different rocks allignment */
 .rocks-alignment-1 {
   justify-content: end;
