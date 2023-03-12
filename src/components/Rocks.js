@@ -1,15 +1,10 @@
-import React from 'react';
-
-const Rocks = ({ rocksCount, rocksAlignment }) => {
+const Rocks = ({ rocksPlacement }) => {
+  // Displays/Hides the rocks depending on the rockPlacement array (1 = shows rock, 0 = hides rock)
   return (
-    <div className={`rocks ${rocksAlignment}`}>
-      {/* <div className='rocks'> */}
-      {Array.from({ length: rocksCount }, (_, i) => (
-        <div key={i} className='rock'>
-          {i}
-        </div>
+    <div className='rocks'>
+      {rocksPlacement.map((rock, idx) => (
+        <div key={idx} className={`rock ${rock === 0 && 'rock-hide'} `}></div>
       ))}
-      {/* <div className='rock'></div> */}
     </div>
   );
 };

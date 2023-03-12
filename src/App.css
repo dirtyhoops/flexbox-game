@@ -5,7 +5,8 @@
   margin-top: 1rem;
   align-items: center;
 }
-.user-input{
+
+.user-input {
   min-width: 25%;
   min-height: 10rem;
   margin-left: 6rem;
@@ -13,97 +14,108 @@
   font-size: 1.5rem;
   word-break: break-all;
 }
-.user-prompt{
+
+.user-prompt {
   margin-left: 6rem;
   font-size: 1.5rem;
 }
-.start-button{
-  margin-left: 40%;
-  height: 6rem;
-  width: 12rem;
-  background: red;
-  font-size: 1.5rem;
+
+.start-button {
+  display: block;
+  cursor: pointer;
+  margin: 30px auto;
+  height: 5rem;
+
+  background-color: #ed6755;
+  border: none;
+  border-radius: 5px;
+  width: 270px;
+  padding: 20px;
+  font-size: 18px;
+  color: #fff;
+  box-shadow: 0px 6px 18px -5px rgba(237, 103, 85, 1);
+  transition: all 0.08s ease;
 }
+
 .board-container {
   width: 35%;
   height: 100%;
   padding-bottom: 54%;
-  background-image: url("../public/river.gif");
+  background-image: url('./assets/river.gif');
   position: relative;
 }
-.board-container-inner-wrapper{
+
+.board-container-inner-wrapper {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  left: 5px;
 }
+
+.ships {
+  display: flex;
+  width: 100%;
+}
+
 /* levels 1-6 positions for the ships */
-.ships-alignment-1{
-  display: flex;
+.ships-alignment-1 {
   justify-content: flex-end;
-  width: 100%;
-  gap: 10px;
 }
-.ships-alignment-2{
-  display: flex;
+
+.ships-alignment-2 {
   justify-content: flex-start;
-  width: 100%;
-  gap: 10px;
 }
-.ships-alignment-3{
-  display: flex;
+
+.ships-alignment-3 {
   justify-content: space-between;
-  width: 100%;
-  gap: 10px;
 }
-.ships-alignment-4{
-  display: flex;
+
+.ships-alignment-4 {
   justify-content: center;
-  width: 100%;
-  gap: 10px;
 }
-.ships-alignment-5{
-  display: flex;
+
+.ships-alignment-5 {
   justify-content: space-evenly;
-  width: 100%;
-  gap: 10px;
 }
-.ships-alignment-6{
-  display: flex;
+
+.ships-alignment-6 {
   justify-content: space-around;
-  width: 100%;
-  gap: 10px;
 }
 
 /* Classes to rotate through to 'animate' the boats down the river */
-.down-one{
+.down-one {
   margin-top: 10%;
 }
-.down-two{
-  margin-top:30%;
-}
-.down-three{
-  margin-top:50%;
-}
-.down-four{
-  margin-top:70%;
-}
-.down-five{
-  margin-top:90%;
-}
-.down-six{
-  margin-top:110%;
-}
-.down-seven{
-  margin-top:130%;
+
+.down-two {
+  margin-top: 30%;
 }
 
+.down-three {
+  margin-top: 50%;
+}
+
+.down-four {
+  margin-top: 70%;
+}
+
+.down-five {
+  margin-top: 90%;
+}
+
+.down-six {
+  margin-top: 110%;
+}
+
+.down-seven {
+  margin-top: 130%;
+}
 
 .ship {
   width: 10%;
   height: 100%;
-  background-image: url(../public/shipA.png);
+  background-image: url(./assets/shipA.png);
   background-size: contain;
   background-repeat: no-repeat;
   padding-bottom: 24%;
@@ -113,7 +125,7 @@
   display: flex;
   width: 100%;
   height: 10%;
-  gap: 10px;
+  /* gap: 10px; */
   position: absolute;
   bottom: 0;
 }
@@ -121,24 +133,72 @@
 .rock {
   width: 10%;
   height: 100%;
-  background-image: url(../public/rock2.png);
+  background-image: url(./assets/rock2.png);
   background-size: contain;
   background-repeat: no-repeat;
-}
-
-.rock-show {
+  transition: all 1s ease;
 }
 
 .rock-hide {
-  display: none;
+  opacity: 0;
 }
 
-
-/* different rocks allignment */
-.rocks-alignment-1 {
-  justify-content: end;
+/* Styling for Modal */
+.modal-wrapper {
+  font-family: 'Roboto', sans-serif;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(34, 25, 25, 0.8);
+  z-index: 1;
 }
 
-.rocks-alignment-2 {
-  justify-content: space-between;
+.modal-container {
+  height: 400px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 20px;
+
+  padding: 50px;
+
+  /* centers the div */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-button {
+  cursor: pointer;
+  background-color: #ed6755;
+  border: none;
+  border-radius: 5px;
+  width: 270px;
+  padding: 20px;
+  font-size: 18px;
+  color: #fff;
+  box-shadow: 0px 6px 18px -5px rgba(237, 103, 85, 1);
+  transition: all 0.08s ease;
+}
+
+.modal-button:hover,
+.start-button:hover {
+  background-color: #e5513e;
+}
+
+.modal-container img {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.modal-container p {
+  font-size: 23px;
+  margin-bottom: 40px;
 }
