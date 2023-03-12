@@ -23,18 +23,25 @@
 .start-button {
   display: block;
   cursor: pointer;
-  margin: 20px auto;
-  height: 6rem;
-  width: 12rem;
-  background: rgb(184, 146, 146);
-  font-size: 1.5rem;
+  margin: 30px auto;
+  height: 5rem;
+
+  background-color: #ed6755;
+  border: none;
+  border-radius: 5px;
+  width: 270px;
+  padding: 20px;
+  font-size: 18px;
+  color: #fff;
+  box-shadow: 0px 6px 18px -5px rgba(237, 103, 85, 1);
+  transition: all 0.08s ease;
 }
 
 .board-container {
   width: 35%;
   height: 100%;
   padding-bottom: 54%;
-  background-image: url('../public/river.gif');
+  background-image: url('./assets/river.gif');
   position: relative;
 }
 
@@ -46,62 +53,61 @@
   left: 5px;
 }
 
+.ships {
+  display: flex;
+  width: 100%;
+}
+
 /* levels 1-6 positions for the ships */
 .ships-alignment-1 {
-  display: flex;
   justify-content: flex-end;
-  width: 100%;
 }
 
 .ships-alignment-2 {
-  display: flex;
   justify-content: flex-start;
-  width: 100%;
 }
 
 .ships-alignment-3 {
-  display: flex;
   justify-content: space-between;
-  width: 100%;
 }
 
 .ships-alignment-4 {
-  display: flex;
   justify-content: center;
-  width: 100%;
 }
 
 .ships-alignment-5 {
-  display: flex;
   justify-content: space-evenly;
-  width: 100%;
 }
 
 .ships-alignment-6 {
-  display: flex;
   justify-content: space-around;
-  width: 100%;
 }
 
 /* Classes to rotate through to 'animate' the boats down the river */
 .down-one {
   margin-top: 10%;
 }
+
 .down-two {
   margin-top: 30%;
 }
+
 .down-three {
   margin-top: 50%;
 }
+
 .down-four {
   margin-top: 70%;
 }
+
 .down-five {
   margin-top: 90%;
 }
+
 .down-six {
   margin-top: 110%;
 }
+
 .down-seven {
   margin-top: 130%;
 }
@@ -109,7 +115,7 @@
 .ship {
   width: 10%;
   height: 100%;
-  background-image: url(../public/shipA.png);
+  background-image: url(./assets/shipA.png);
   background-size: contain;
   background-repeat: no-repeat;
   padding-bottom: 24%;
@@ -127,13 +133,10 @@
 .rock {
   width: 10%;
   height: 100%;
-  background-image: url(../public/rock2.png);
+  background-image: url(./assets/rock2.png);
   background-size: contain;
   background-repeat: no-repeat;
   transition: all 1s ease;
-}
-
-.rock-show {
 }
 
 .rock-hide {
@@ -142,23 +145,60 @@
 
 /* Styling for Modal */
 .modal-wrapper {
+  font-family: 'Roboto', sans-serif;
   position: fixed;
   left: 0;
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(34, 25, 25, 0.8);
   z-index: 1;
 }
 
 .modal-container {
-  height: 500px;
-  width: 500px;
-  background-color: #fefefe;
-  margin: 0;
+  height: 400px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 20px;
+
+  padding: 50px;
+
+  /* centers the div */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 2px solid #888;
+}
+
+.modal-button {
+  cursor: pointer;
+  background-color: #ed6755;
+  border: none;
+  border-radius: 5px;
+  width: 270px;
+  padding: 20px;
+  font-size: 18px;
+  color: #fff;
+  box-shadow: 0px 6px 18px -5px rgba(237, 103, 85, 1);
+  transition: all 0.08s ease;
+}
+
+.modal-button:hover,
+.start-button:hover {
+  background-color: #e5513e;
+}
+
+.modal-container img {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.modal-container p {
+  font-size: 23px;
+  margin-bottom: 40px;
 }

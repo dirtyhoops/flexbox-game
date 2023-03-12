@@ -23,19 +23,43 @@ const Modal = ({
   return (
     <div className='modal-wrapper'>
       <div className='modal-container'>
-        <p>{message}</p>
         {isAnswerCorrect ? (
           <>
             {currentLevel !== 6 ? (
-              <button onClick={() => handleNextLevel()}>
-                Continue to next level
-              </button>
+              <>
+                <img src={require('../assets/check.png')} alt='correct mark' />
+                <p>Good job! Your answer is correct!</p>
+                <button
+                  className='modal-button'
+                  onClick={() => handleNextLevel()}
+                >
+                  Continue to next level
+                </button>
+              </>
             ) : (
-              <button onClick={() => resetGame()}>Reset Game</button>
+              <>
+                <img
+                  src={require('../assets/shiplogo.png')}
+                  alt='incorrect mark'
+                />
+                <p>Great job! You fisnihed all 6 levels!</p>
+                <button className='modal-button' onClick={() => resetGame()}>
+                  Reset Game
+                </button>
+              </>
             )}
           </>
         ) : (
-          <button onClick={() => resetLevel()}>Try Again</button>
+          <>
+            <img
+              src={require('../assets/decline.png')}
+              alt='finished game mark'
+            />
+            <p>Your answer is incorrect!</p>
+            <button className='modal-button' onClick={() => resetLevel()}>
+              Try Again
+            </button>
+          </>
         )}
       </div>
     </div>

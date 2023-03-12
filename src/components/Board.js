@@ -8,7 +8,6 @@ const Board = ({
   startGame,
   numOfShips,
   shipDistance,
-  userStyling,
   defaultPosition
 }) => {
   return (
@@ -19,7 +18,6 @@ const Board = ({
           startGame={startGame}
           distance={shipDistance}
           numOfShips={numOfShips}
-          userStyle={userStyling}
         />
         <Rocks rocksPlacement={gameLevel.rocksPlacement} />
         {/* <p>ayoo</p> */}

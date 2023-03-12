@@ -1,13 +1,13 @@
 import { useState } from 'react';
 
-const Input = ({ setShipStyling, isModalOpen }) => {
+const Input = ({ setShipStyling, isModalOpen, currentLevel }) => {
   const [inputValue, setInputValue] = useState('');
   // possibleAnswers is both used to verify that the user input matches one of the six justify-content property
   // settings, but it's also used to pass in the proper class name that contains the corresponding styling.
   const possibleAnswers = {
     'flex-start': 'ships-alignment-2',
     'flex-end': 'ships-alignment-1',
-    center: 'ships-alignment-4',
+    'center': 'ships-alignment-4',
     'space-between': 'ships-alignment-3',
     'space-around': 'ships-alignment-6',
     'space-evenly': 'ships-alignment-5'
@@ -43,6 +43,7 @@ const Input = ({ setShipStyling, isModalOpen }) => {
         onChange={updateUserInput}
         value={inputValue}
       ></textarea>
+      <p className='user-prompt'>Current Level: {currentLevel}/6</p>
     </div>
   );
 };

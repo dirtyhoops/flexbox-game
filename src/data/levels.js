@@ -1,5 +1,3 @@
-// 1. 'rocks-allignment-1' : flex-end
-
 const levels = {
   1: {
     shipsCount: 2,
