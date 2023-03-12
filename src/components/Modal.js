@@ -32,7 +32,7 @@ const Modal = ({
                   src={require('../assets/shiplogo.png')}
                   alt='incorrect mark'
                 />
-                <p>Great job! You fisnihed all 6 levels!</p>
+                <p>Great job! You finished all 6 levels!</p>
                 <button className='modal-button' onClick={() => resetGame()}>
                   Reset Game
                 </button>

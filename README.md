@@ -2,6 +2,10 @@
 
 A simple tutorial style game to learn the different parameters for the 'justify-content' property.
 
+## Deployed live demo at:
+
+[click me to see it live!](https://640e1fe8da84f43666b4a66d--gleaming-donut-945d52.netlify.app)
+
 ## How to run it locally:
 
 ```

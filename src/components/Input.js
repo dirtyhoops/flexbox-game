@@ -38,6 +38,7 @@ const Input = ({ setShipStyling, isModalOpen, currentLevel }) => {
         will help the boats avoid the rocks?
       </p>
       <textarea
+        placeholder="type your answer here"
         type='text'
         className='user-input'
         onChange={updateUserInput}
