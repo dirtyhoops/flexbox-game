@@ -1,4 +1,4 @@
-[# Fast Water Flex
+# Fast Water Flex
 
 A simple tutorial style game to learn the different parameters for the 'justify-content' property.
 
@@ -9,7 +9,7 @@ A simple tutorial style game to learn the different parameters for the 'justify-
 ## How to run it locally:
 
 ```
-git clone [url to the repo]
+git clone https://github.com/dirtyhoops/flexbox-game.git
 
 cd fastwaterflex
 
