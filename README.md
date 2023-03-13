@@ -27,7 +27,7 @@ localhost:3000
 
 
 ## Screenshots
-![ScreenShot](/src/screenshots/schoonshot1.png)
+![ScreenShot](/src/screenshots/screenshot1.png)
 
 
 ## Technologies
