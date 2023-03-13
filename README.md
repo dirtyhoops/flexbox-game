@@ -11,7 +11,7 @@ A simple tutorial style game to learn the different parameters for the 'justify-
 ```
 git clone https://github.com/dirtyhoops/flexbox-game.git
 
-cd fastwaterflex
+cd flexbox-game
 
 npm install
 
