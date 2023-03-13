@@ -1,4 +1,4 @@
-# Fast Water Flex
+[# Fast Water Flex
 
 A simple tutorial style game to learn the different parameters for the 'justify-content' property.
 
@@ -27,18 +27,18 @@ localhost:3000
 
 
 ## Screenshots
-![ScreenShot](../src/screenshots/schoonshot1.png)
+<img src="https://github.com/dirtyhoops/flexbox-game/blob/main/src/screenshots/screenshot1.PNG" width="500">
+
 
 
 ## Technologies
 
-create-react-app
-
+React
 
 ## Stretch Goals
 
-animated transitions between levels (so it looks like it's all one long river journey)
+Animated transitions between levels (so it looks like it's all one long river journey)
 
-more complex flexbox properties to learn
+More complex flexbox properties to learn
 
-canvas based rendering
+Canvas based rendering
