@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const Input = ({ setShipStyling, isModalOpen, currentLevel }) => {
+const Input = ({ setShipStyling, isModalOpen, currentLevel, startGame }) => {
   const [inputValue, setInputValue] = useState('');
   // possibleAnswers is both used to verify that the user input matches one of the six justify-content property
   // settings, but it's also used to pass in the proper class name that contains the corresponding styling.
@@ -38,11 +38,14 @@ const Input = ({ setShipStyling, isModalOpen, currentLevel }) => {
         will help the boats avoid the rocks?
       </p>
       <textarea
-        placeholder="type your answer here"
+        placeholder={
+          !startGame ? 'Click start to type' : 'type your answer here'
+        }
         type='text'
         className='user-input'
         onChange={updateUserInput}
         value={inputValue}
+        disabled={!startGame}
       ></textarea>
       <p className='user-prompt'>Current Level: {currentLevel}/6</p>
     </div>

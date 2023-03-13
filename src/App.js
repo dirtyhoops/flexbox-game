@@ -31,6 +31,7 @@ const App = () => {
   function beginLevel() {
     setStartGame(true);
     setShipsMoving(true);
+    setIsAnswerCorrect(false);
   }
 
   // Resets the game to level 1
@@ -68,9 +69,7 @@ const App = () => {
         // Open the modal
         setIsModalOpen(true);
 
-        if (
-          convertFromClass[defaultPosition] === levels[currentLevel][`answer`]
-        ) {
+        if (convertFromClass[defaultPosition] === levels[currentLevel].answer) {
           setIsAnswerCorrect(true);
           console.log('yessir');
         }
@@ -110,6 +109,7 @@ const App = () => {
           setShipStyling={setDefaultPosition}
           isModalOpen={isModalOpen}
           currentLevel={currentLevel}
+          startGame={startGame}
         />
       </div>
       {!startGame && (
