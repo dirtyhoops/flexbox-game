@@ -27,8 +27,7 @@ localhost:3000
 
 
 ## Screenshots
-
-<img src="https://www.gitrepos.com/reponame/subfolder/image.jpeg" width="600">
+![ScreenShot](/src/screenshots/schoonshot1.png)
 
 
 ## Technologies
