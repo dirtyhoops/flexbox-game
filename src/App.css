@@ -4,21 +4,21 @@
   height: 100%;
   margin: 30px auto 0px auto;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1150px;
   padding: 0 20px;
 }
 
 .user-input {
   min-width: 25%;
   min-height: 10rem;
-  margin-left: 6rem;
+  margin-left: 4rem;
   text-align: center;
   font-size: 1.5rem;
   word-break: break-all;
 }
 
 .user-prompt {
-  margin-left: 6rem;
+  margin-left: 4rem;
   font-size: 1.5rem;
 }
 
@@ -40,7 +40,7 @@
 }
 
 .board-container {
-  width: 100%;
+  width: 75%;
   height: 85vh;
   /* padding-bottom: 54%; */
   background-image: url('./assets/river.gif');
@@ -107,11 +107,11 @@
 }
 
 .down-six {
-  margin-top: 100%;
+  margin-top: 105%;
 }
 
 .down-seven {
-  margin-top: 115%;
+  margin-top: 123%;
 }
 
 .ship {
